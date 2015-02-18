@@ -1,4 +1,5 @@
 # coding:utf-8
+import sys
 import pkg_resources
 
 installed_packages = dict(
@@ -56,3 +57,10 @@ def showPackageTree(lines):
 def show(requirementsfile):
     with open(requirementsfile) as f:
         showPackageTree(f.readlines())
+
+def main():
+    requirementsfile = sys.argv[1]
+    show(requirementsfile)
+
+if __name__ == '__main__':
+    main()

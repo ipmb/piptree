@@ -20,11 +20,13 @@ setup(
     author='Mark Wirblich',
     author_email='mark@wirblich.com',
     license='MIT',
-    packages=['piptree'],
+    py_modules=['piptree'],
     install_requires=[
         'pip',
     ],
     include_package_data=True,
     zip_safe=False,
-    scripts=['bin/piptree'],
+    entry_points={
+        'console_scripts': ['piptree = piptree:main'],
+    }
     )
